@@ -570,29 +570,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
         )
         
-        elif query.data == "help":
-        buttons =[[
-            InlineKeyboardButton('🔋 𝙴𝚇𝚃𝚁𝙰 𝙼𝙾𝙳𝚂 🔋', callback_data='extra'),            
-            ],[
-            InlineKeyboardButton('𝙼𝙰𝙽𝚄𝙴𝙻 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='manuelfilter'),
-            InlineKeyboardButton('𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='autofilter'),
-            InlineKeyboardButton('𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽𝚂', callback_data='coct')
-            ],[                       
-            InlineKeyboardButton('𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='tele'),
-            InlineKeyboardButton('𝚂𝙷𝙰𝚁𝙴-𝚃𝙴𝚇𝚃', callback_data='sharetxt'),
-            InlineKeyboardButton('𝙵𝙸𝙻𝙴-𝚂𝚃𝙾𝚁𝙴', callback_data='newdata')
-            ],
-        [[
-                  InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂 🔮', callback_data='stats')
-            ],[
-            InlineKeyboardButton('🚫 𝙲𝙻𝙾𝚂𝙴', callback_data='close_data'),
-            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')           
-       ]]
-        reply_markup = InlineKeyboardMarkup(buttons)             
-        await query.edit_message_media(  
-            InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
-            reply_markup=reply_markup,           
-        )
+        
             
     elif query.data == "fuck":
         buttons = [[
